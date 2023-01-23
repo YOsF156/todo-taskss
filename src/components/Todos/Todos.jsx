@@ -4,11 +4,11 @@ import todostore from '../../Stores/Main'
 import { observer } from 'mobx-react'
 
 
-function Todos({ todosList, hanDel }) {
-
+function Todos() {
+    const { todos } = todostore
     return (
         <ul>
-            {todostore.todos.map((todo, i) => <Todo key={i + todo} text={todo} id={i} hanDel={hanDel} />)}
+            {todos.map((todo, i) => <Todo key={i + todo} id={i} />)}
         </ul>
     )
 }

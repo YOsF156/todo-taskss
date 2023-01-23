@@ -2,18 +2,25 @@ import { observer } from 'mobx-react'
 import React, { useEffect, useRef } from 'react'
 import todostore from '../../Stores/Main'
 
-function Input({ setTodosList }) {
+function Input() {
     const input = useRef()
 
     useEffect(() => {
         input.current.focus()
-        input.current.value = ""
+    }, [])
 
-    }, [todostore.todos])
+    const handleClick = () => {
+        todostore.addTodo(input.current.value);
+        input.current.value = "";
+        input.current.focus()
+    }
+
+
     return (
         <div>
             <input ref={input} type="text" className="form-input" />
-            <button onClick={() => todostore.addTodo(input.current.value)} type="submit" className="btn"> Add Task</button>
+
+            <button onClick={handleClick} type="submit" className="btn"> Add Task </button>
 
         </div>
     )
