@@ -6,7 +6,10 @@ function Todo({ id }) {
     const { delTodo, todos } = todostore
 
     return (
-        <li onDoubleClick={() => delTodo(id)}>{todos[id]}</li>
+        <>
+            <li >{todos[id]} <span title="delete this task" onClick={() => delTodo(id)}> 🗑️ </span></li>
+
+        </>
     )
 }
 export default observer(Todo)

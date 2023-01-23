@@ -35,4 +35,18 @@ li {
   font-size: 2rem;
   margin-top: 1rem;
   width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+li span {
+  background-color: coral;
+  border-radius: 7px;
+  margin: 0.2rem;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.8);
+}
+
+li span:hover {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
