@@ -10,8 +10,7 @@ function Todo({ id }) {
             <li >
                 <div>{todos[id]}</div>
                 <span title="delete this task" onClick={() => delTodo(id)}>
-                    {" "}
-                    🗑️{" "}
+                    🗑️
                 </span>
             </li>
 
