@@ -46,8 +46,9 @@ li div {
   white-space: nowrap;
   overflow: hidden;
   min-width: 10rem;
-  direction :rtl;
+  direction: rtl;
 }
+
 li span {
   background-color: coral;
   border-radius: 7px;
