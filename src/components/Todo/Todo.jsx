@@ -7,7 +7,13 @@ function Todo({ id }) {
 
     return (
         <>
-            <li >{todos[id]} <span title="delete this task" onClick={() => delTodo(id)}> 🗑️ </span></li>
+            <li >
+                <div>{todos[id]}</div>
+                <span title="delete this task" onClick={() => delTodo(id)}>
+                    {" "}
+                    🗑️{" "}
+                </span>
+            </li>
 
         </>
     )
