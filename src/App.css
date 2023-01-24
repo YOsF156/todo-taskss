@@ -24,7 +24,7 @@ ul {
   margin: 5rem;
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   /* justify-content: space-around; */
 }
@@ -36,8 +36,17 @@ li {
   margin-top: 1rem;
   width: 50%;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   padding: 0 2rem;
+  min-width: 15rem;
+}
+li div {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 10rem;
+  direction :rtl;
 }
 li span {
   background-color: coral;
